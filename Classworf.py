@@ -1,0 +1,77 @@
+import time
+
+from telebot import types
+import telebot
+
+import datetime as dt
+bot_token = "7891828564:AAGGL2kpTGNHsAwiBzaS5ugodjkmeinljiU"
+bot = telebot.TeleBot(bot_token)
+@bot.message_handler(commands=['start'])
+def start(messege):
+    bot.reply_to(messege,"Привет этот бот может отчитывать сколько дней до твоего др))")
+    bot.reply_to(messege, "Просто нажми сюду --> /dob")
+@bot.message_handler(commands=['dob'])
+def mob(messege):
+    markup = types.InlineKeyboardMarkup(row_width=4)
+    btn1 = types.InlineKeyboardButton("1", callback_data="1")
+    btn2 = types.InlineKeyboardButton("2", callback_data="2")
+    btn3 = types.InlineKeyboardButton("3", callback_data="3")
+    btn4 = types.InlineKeyboardButton("4", callback_data="4")
+    btn5 = types.InlineKeyboardButton("5", callback_data="5")
+    btn6 = types.InlineKeyboardButton("6", callback_data="6")
+    btn7 = types.InlineKeyboardButton("7", callback_data="7")
+    btn8 = types.InlineKeyboardButton("8", callback_data="8")
+    btn9 = types.InlineKeyboardButton("9", callback_data="9")
+    btn10 = types.InlineKeyboardButton("10", callback_data="10")
+    btn11= types.InlineKeyboardButton("11", callback_data="11")
+    btn12 = types.InlineKeyboardButton("12", callback_data="12")
+    markup.add(btn1,btn2,btn3,btn4)
+    markup.add(btn5,btn6,btn7,btn8)
+    markup.add(btn9,btn10,btn11,btn12)
+
+def dod(messege):
+    bot.send_message(messege.chat.id, "какого месяца твое др?", reply_markup=markup)
+    time.sleep(2)
+    markup2 = types.InlineKeyboardMarkup(row_width=8)
+    btnn1 = types.InlineKeyboardButton("1", callback_data2="1")
+    btnn2 = types.InlineKeyboardButton("2", callback_data2="2")
+    btnn3 = types.InlineKeyboardButton("3", callback_data2="3")
+    btnn4 = types.InlineKeyboardButton("4", callback_data2="4")
+    btnn5 = types.InlineKeyboardButton("5", callback_data2="5")
+    btnn6 = types.InlineKeyboardButton("6", callback_data2="6")
+    btnn7 = types.InlineKeyboardButton("7", callback_data2="7")
+    btnn8 = types.InlineKeyboardButton("8", callback_data2="8")
+    btnn9 = types.InlineKeyboardButton("9", callback_data2="9")
+    btnn10 = types.InlineKeyboardButton("10", callback_data2="10")
+    btnn11 = types.InlineKeyboardButton("11", callback_data2="11")
+    btnn12 = types.InlineKeyboardButton("12", callback_data2="12")
+    btnn13 = types.InlineKeyboardButton("13", callback_data2="13")
+    btnn14 = types.InlineKeyboardButton("14", callback_data2="14")
+    btnn15 = types.InlineKeyboardButton("15", callback_data2="15")
+    btnn16 = types.InlineKeyboardButton("16", callback_data2="16")
+    btnn17 = types.InlineKeyboardButton("17", callback_data2="17")
+    btnn18 = types.InlineKeyboardButton("18", callback_data2="18")
+    btnn19 = types.InlineKeyboardButton("19", callback_data2="19")
+    btnn20 = types.InlineKeyboardButton("20", callback_data2="20")
+    btnn21 = types.InlineKeyboardButton("21", callback_data2="21")
+    btnn22 = types.InlineKeyboardButton("22", callback_data2="22")
+    btnn23 = types.InlineKeyboardButton("23", callback_data2="23")
+    btnn24 = types.InlineKeyboardButton("24", callback_data2="24")
+    btnn25 = types.InlineKeyboardButton("25", callback_data2="25")
+    btnn26 = types.InlineKeyboardButton("26", callback_data2="26")
+    btnn27 = types.InlineKeyboardButton("27", callback_data2="27")
+    btnn28 = types.InlineKeyboardButton("28", callback_data2="28")
+    btnn29 = types.InlineKeyboardButton("29", callback_data2="29")
+    btnn30 = types.InlineKeyboardButton("30", callback_data2="30")
+    btnn31 = types.InlineKeyboardButton("31", callback_data2="31")
+    btnn32 = types.InlineKeyboardButton("32", callback_data2="32")
+
+
+    markup2.add(btnn1, btnn2, btnn3, btnn4,btnn5, btnn6, btnn7, btnn8)
+    markup2.add(btnn9, btnn10, btnn11, btnn12,btnn13, btnn14, btnn15, btnn16)
+    markup2.add(btnn17, btnn18, btnn19, btnn20,btnn21, btnn22, btnn23, btnn24)
+    markup2.add(btnn25, btnn26, btnn27, btnn28, btnn29, btnn30, btnn31, btnn32)
+    bot.send_message(messege.chat.id, "какого дня твое др?", reply_markup=markup2)
+    bot.send_message(messege.chat.id, messege.text)
+bot.polling()
+
