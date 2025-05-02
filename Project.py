@@ -44,7 +44,7 @@ pprint.pprint(reverse_dict)
 pprint.pprint(morse_code_dict)
 history_list = []
 import telebot
-bot_token = "пше "
+bot_token = "НАПИШИТЕ СВОЙ ТОКЕН"
 bot = telebot.TeleBot(bot_token)
 @bot.message_handler(commands=['start'])
 def start(message):
